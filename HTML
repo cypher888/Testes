@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo</title>
+    <link rel="stylesheet" href="tudo.css">
+</head>
+<body>
+        
+    <div class="conteiner1">
+    <h1>Vogal ou Consoante </h1>
+    Digite apenas UM caractere : 
+    <input type="text" id="letra"> <br>
+    <button onclick="Verificar()">Checar</button>
+</div>
+
+    <script>
+        function Verificar(){
+
+            var letra = document.getElementById("letra").value;
+            letra = letra.toLowerCase();
+
+            if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
+                alert("Vogal!")
+            } else{
+                alert("Consoante!")
+            }
+        }
+    </script>
+</body>
+
+    <body>
+
+    <div class="conteiner2">
+        <h1>Calcular Média</h1>
+        Primeira nota :
+        <input type="number" id="nota1"> <br>
+        Segunda nota : 
+        <input type="number" id="nota2"><br>
+        <button onclick="Calcular()">Calcular Média</button>
+    </div>
+    
+    <script>
+        function Calcular(){
+            var nota1 = parseFloat(window.document.getElementById("nota1").value);
+            var nota2 = parseFloat(window.document.getElementById("nota2").value);
+
+            var media = (nota1 + nota2) / 2;
+
+            if (media >= 7)
+            if (media == 10) 
+                alert("Uau! Aprovado com distinção!");
+            else 
+                alert(`Parbéns, aprovado! Media ${media}`);
+            else
+                alert("Reprovado!")
+    
+        }
+    </script>
+
+<div class="conteiner3">
+    <h1>Número Maior</h1>
+    Digite o primeiro número : 
+    <input type="number" id="n1"><br>
+    Digite o segundo número : 
+    <input type="number" id="n2"><br>
+    Digite o terceiro número : 
+    <input type="number" id="n3"><br>
+    <button onclick="CalcularMaior()">Calcular Maior</button>
+</div>
+
+<script>
+function CalcularMaior(){
+    var n1 = parseFloat(window.document.getElementById("n1").value);
+    var n2 = parseFloat(window.document.getElementById("n2").value);
+    var n3 = parseFloat(window.document.getElementById("n3").value);
+
+    if ( n1 > n2 && n1 > n3){
+        alert(`${n1} é o maior !`);
+    }else if (n2 > n1 && n2 > n3){
+        alert(`${n2} é o maior !`);
+    } else {
+        alert(`${n3} é o maior !`);
+    }
+}
+</script>
+
+<div class="container4">
+    <h1>Inverter números</h1>
+    Primeiro número :
+    <input type="number" id="numero1"><br>
+    Segundo número :
+    <input type="number" id="numero2"><br>
+    <button onclick="Inverter()">Inverter</button>
+
+<script>
+    function Inverter(){
+        var numero1 = parseFloat(window.document.getElementById("numero1").value);
+        var numero2 = parseFloat(window.document.getElementById("numero2").value);
+
+        alert(
+        `        Antes : 
+        Primeiro número =  ${numero1}
+        Segundo número = ${numero2}
+
+        Invertido :
+        Primeiro número = ${numero2}
+        Segundo número = ${numero1}`)
+    }
+</script>
+</div>
+
+<div class="container5">
+    <h1>Calcular o maior e o menor</h1>
+    Primeiro número :
+    <input type="number" id="numero_1"><br>
+    Segundo número :
+    <input type="number" id="numero_2"><br>
+    Terceiro número :
+    <input type="number" id="numero_3"><br>
+    <button onclick="Calcularmaior()"> Maior</button>
+    <button onclick="Calcularmenor()">Menor</button>
+
+    <script>
+        function Calcularmaior(){
+            var numero_1 = parseFloat(document.getElementById("numero_1").value);
+            var numero_2 = parseFloat(document.getElementById("numero_2").value);
+            var numero_3 = parseFloat(document.getElementById("numero_3").value);
+
+            if (numero_1 > numero_2 && numero_1 > numero_3){
+                alert(`${numero_1} é o maior`);
+            }else if (numero_2 > numero_1 && numero_2 > numero_3){
+                alert(`${numero_2} é o maior`);
+            }else {
+                alert(`${numero_3} é o maior`);
+            }
+        }
+
+        function Calcularmenor(){
+            var numero_1 = parseFloat(document.getElementById("numero_1").value);
+            var numero_2 = parseFloat(document.getElementById("numero_2").value);
+            var numero_3 = parseFloat(document.getElementById("numero_3").value);
+
+            if (numero_1 < numero_2 && numero_1 < numero_3){
+                alert(`${numero_1} é o maior`);
+            }else if (numero_2 < numero_1 && numero_2 < numero_3){
+                alert(`${numero_2} é o maior`);
+            }else {
+                alert(`${numero_3} é o maior`);
+            }
+        }
+    </script>
+
+</div>
+
+        </body>
+</html>
